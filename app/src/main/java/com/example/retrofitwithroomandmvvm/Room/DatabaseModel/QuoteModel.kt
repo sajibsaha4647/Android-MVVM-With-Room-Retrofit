@@ -4,9 +4,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-@Entity(tableName = "quotemodel")
+
 data class QuoteModel (
-    @PrimaryKey(autoGenerate = true)
     val quoteid:Long,
     val _id: String,
     val author: String,
@@ -15,5 +14,4 @@ data class QuoteModel (
     val dateAdded: String,
     val dateModified: String,
     val length: Int,
-    val tags: List<String>
 )

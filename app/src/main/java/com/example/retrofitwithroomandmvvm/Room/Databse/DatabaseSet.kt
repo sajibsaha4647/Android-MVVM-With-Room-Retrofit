@@ -5,10 +5,11 @@ import androidx.room.Database
 import androidx.room.Entity
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.retrofitwithroomandmvvm.Model.Result
 import com.example.retrofitwithroomandmvvm.Room.Database.DatabaseModel.QuoteModel
 import com.example.retrofitwithroomandmvvm.Room.Database.DatabaseSAO.QuotesDAO
 
-@Database(entities = [QuoteModel::class], version = 1)
+@Database(entities = [Result::class], version = 1)
 abstract class DatabaseSet:RoomDatabase() {
 
     abstract fun QuoteDaoList():QuotesDAO

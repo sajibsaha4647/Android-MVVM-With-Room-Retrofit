@@ -18,9 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val apiServices =RetrofitHelper.instance().create(Apiservice::class.java)
-        val repo = Repositorys(apiServices)
-        mainviewModel = ViewModelProvider(this,MainviewModelFactory(repo)).get(MainviewModel::class.java)
+
+        val repositorys = (application as MainApplication).repositorys
+
+        mainviewModel = ViewModelProvider(this,MainviewModelFactory(repositorys)).get(MainviewModel::class.java)
 
         mainviewModel.quotes.observe(this, Observer {
             Log.d("success",it.page.toString())

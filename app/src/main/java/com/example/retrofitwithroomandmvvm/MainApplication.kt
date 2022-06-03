@@ -18,7 +18,7 @@ class MainApplication : Application() {
     private fun initialized() {
         val apiServices = RetrofitHelper.instance().create(Apiservice::class.java)
         val databse = DatabaseSet.getDatabaseInstance(applicationContext)
-        repositorys = Repositorys(apiServices, databse)
+        repositorys = Repositorys(apiServices, databse,applicationContext)
 
     }
 }

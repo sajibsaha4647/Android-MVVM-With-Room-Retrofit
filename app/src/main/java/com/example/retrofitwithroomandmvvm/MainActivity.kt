@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         mainviewModel = ViewModelProvider(this,MainviewModelFactory(repositorys)).get(MainviewModel::class.java)
 
         mainviewModel.quotes.observe(this, Observer {
-            Log.d("success",it.page.toString())
+            Log.d("success",it.results.size.toString())
         })
 
     }

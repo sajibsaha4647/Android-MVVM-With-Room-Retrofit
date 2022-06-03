@@ -14,5 +14,5 @@ interface QuotesDAO {
     suspend fun insertQuotes(quotes: List<Result>)
 
     @Query("SELECT * FROM quotemodel")
-    fun getAllQuotes():LiveData<List<Result>>
+    fun getAllQuotes():List<Result>
 }

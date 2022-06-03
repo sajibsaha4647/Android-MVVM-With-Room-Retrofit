@@ -3,8 +3,6 @@ package com.example.retrofitwithroomandmvvm.Room.Database.DatabaseModel
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
-
 data class QuoteModel (
     val quoteid:Long,
     val _id: String,

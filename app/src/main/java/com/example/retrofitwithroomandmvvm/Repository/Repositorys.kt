@@ -35,4 +35,12 @@ class Repositorys(
 
     }
 
+    suspend fun getQuotesackground(){
+        val randNUmber = (Math.random() * 10).toInt()
+        val result = apiservice.getQuotes(randNUmber)
+        if(result?.body() !=  null){
+            databaseSet.QuoteDaoList().insertQuotes(result.body()!!.results)
+        }
+    }
+
 }

@@ -22,7 +22,7 @@ class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initialized()
-        setupWorker()
+//        setupWorker()
     }
 
     private fun setupWorker(){

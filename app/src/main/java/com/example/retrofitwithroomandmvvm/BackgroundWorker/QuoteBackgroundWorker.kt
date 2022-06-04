@@ -16,7 +16,6 @@ class QuoteBackgroundWorker(private val context: Context,params:WorkerParameters
         val repositorys = (context as MainApplication).repositorys
         CoroutineScope(Dispatchers.IO).launch {
             repositorys.getQuotesackground()
-
         }
         return Result.success()
     }
